@@ -18,6 +18,9 @@ b = kit.find_blender()
 if not b:
     sys.exit("Blender not found. Install Blender 5.2 or newer, or put its path in config.json as \"blender\".")
 cmd = [b, "-b", "--factory-startup", "-P", os.path.join(kit.STUDIO, "tools", "render.py"), "--"] + args
+import platform, shutil
+if platform.system() == "Linux" and not os.environ.get("DISPLAY") and shutil.which("xvfb-run"):
+    cmd = ["xvfb-run", "-a", "-s", "-screen 0 1920x1080x24 +extension GLX +render"] + cmd
 NOISE = re.compile(r"(\| Saved:|Fra:\d|^\d\d:\d\d\.\d+\s+\w+\s+\||^Blender \d|^Read prefs|^Warning: |^Color management|^Time: |^$)")
 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
 show_rest = False
