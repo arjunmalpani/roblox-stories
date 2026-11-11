@@ -1,0 +1,18 @@
+# Virtual environments & local machine configs
+.venv/
+venv/
+.env
+*.env
+__pycache__/
+*.pyc
+
+# Render outputs and caches
+videos/**/preview/
+videos/**/frames/
+videos/**/out/
+videos/**/still/
+videos/**/full.jpg
+*.blend1
+*.tmp
+.DS_Store
+Thumbs.db
