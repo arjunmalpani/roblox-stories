@@ -43,6 +43,17 @@ SENT_END = re.compile(r'[.!?\u2026]["\')\]\u201d\u2019]*$')
 
 
 # ---- transcription (runs in the whisper interpreter) -----------------------------------
+def get_groq_key():
+    k = os.environ.get("GROQ_API_KEY", "").strip()
+    p = os.path.join(ROOT, ".env")
+    if not k and os.path.exists(p):
+        for line in open(p, encoding="utf-8"):
+            m = re.match(r"\s*GROQ_API_KEY\s*=\s*['\"]?([^'\"\s]+)", line)
+            if m:
+                k = m.group(1)
+    return k
+
+
 def load16k(src):
     # ffmpeg -> 16 kHz mono float32 array; avoids PyAV, whose newer releases break faster-whisper's file loading
     import numpy as np
@@ -52,6 +63,33 @@ def load16k(src):
 
 
 def transcribe(src, dst):
+    groq_key = get_groq_key()
+    if groq_key:
+        try:
+            import requests
+            print("Transcribing via Groq Whisper API (whisper-large-v3-turbo)...")
+            url = "https://api.groq.com/openai/v1/audio/transcriptions"
+            headers = {"Authorization": f"Bearer {groq_key}"}
+            with open(src, "rb") as f:
+                files = {"file": ("audio.wav", f, "audio/wav")}
+                data = {
+                    "model": "whisper-large-v3-turbo",
+                    "response_format": "verbose_json",
+                    "timestamp_granularities[]": "word",
+                    "language": "en"
+                }
+                r = requests.post(url, headers=headers, files=files, data=data, timeout=60)
+                if r.status_code == 200:
+                    raw_words = r.json().get("words", [])
+                    words = [{'w': w['word'].strip(), 's': round(float(w['start']), 3), 'e': round(float(w['end']), 3)} for w in raw_words]
+                    json.dump(words, open(dst, 'w'), indent=0)
+                    print(f"Groq Whisper transcription success: {len(words)} words.")
+                    return
+                else:
+                    print(f"Groq API error {r.status_code}: {r.text}, falling back to local faster-whisper...", file=sys.stderr)
+        except Exception as e:
+            print(f"Groq call failed ({e}), falling back to local faster-whisper...", file=sys.stderr)
+
     from faster_whisper import WhisperModel
     audio = load16k(src)
     def run(device, compute):

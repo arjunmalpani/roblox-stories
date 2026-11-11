@@ -1,0 +1,1922 @@
+[
+{
+"word": "I",
+"start": 0.0,
+"end": 0.146
+},
+{
+"word": "hiccuped",
+"start": 0.146,
+"end": 0.458
+},
+{
+"word": "in",
+"start": 0.458,
+"end": 0.52
+},
+{
+"word": "class",
+"start": 0.52,
+"end": 0.728
+},
+{
+"word": "and",
+"start": 0.728,
+"end": 0.916
+},
+{
+"word": "shrank",
+"start": 0.916,
+"end": 1.145
+},
+{
+"word": "to",
+"start": 1.145,
+"end": 1.27
+},
+{
+"word": "the",
+"start": 1.27,
+"end": 1.374
+},
+{
+"word": "size",
+"start": 1.374,
+"end": 1.54
+},
+{
+"word": "of",
+"start": 1.54,
+"end": 1.644
+},
+{
+"word": "a",
+"start": 1.644,
+"end": 1.727
+},
+{
+"word": "pencil!",
+"start": 1.727,
+"end": 2.102
+},
+{
+"word": "Then",
+"start": 2.04,
+"end": 2.185
+},
+{
+"word": "my",
+"start": 2.185,
+"end": 2.331
+},
+{
+"word": "teacher",
+"start": 2.331,
+"end": 2.477
+},
+{
+"word": "dropped",
+"start": 2.477,
+"end": 2.768
+},
+{
+"word": "a",
+"start": 2.768,
+"end": 2.914
+},
+{
+"word": "textbook",
+"start": 2.914,
+"end": 3.143
+},
+{
+"word": "straight",
+"start": 3.226,
+"end": 3.476
+},
+{
+"word": "toward",
+"start": 3.476,
+"end": 3.704
+},
+{
+"word": "my",
+"start": 3.704,
+"end": 3.871
+},
+{
+"word": "head!",
+"start": 3.871,
+"end": 4.162
+},
+{
+"word": "You",
+"start": 4.141,
+"end": 4.308
+},
+{
+"word": "see,",
+"start": 4.308,
+"end": 4.558
+},
+{
+"word": "in",
+"start": 4.558,
+"end": 4.662
+},
+{
+"word": "this",
+"start": 4.662,
+"end": 4.787
+},
+{
+"word": "world,",
+"start": 4.787,
+"end": 5.161
+},
+{
+"word": "every",
+"start": 5.161,
+"end": 5.307
+},
+{
+"word": "time",
+"start": 5.307,
+"end": 5.453
+},
+{
+"word": "you",
+"start": 5.453,
+"end": 5.598
+},
+{
+"word": "hiccup,",
+"start": 5.598,
+"end": 5.994
+},
+{
+"word": "you",
+"start": 5.994,
+"end": 6.015
+},
+{
+"word": "shrink",
+"start": 6.015,
+"end": 6.243
+},
+{
+"word": "by",
+"start": 6.243,
+"end": 6.41
+},
+{
+"word": "half",
+"start": 6.41,
+"end": 6.556
+},
+{
+"word": "your",
+"start": 6.556,
+"end": 6.722
+},
+{
+"word": "size.",
+"start": 6.722,
+"end": 7.118
+},
+{
+"word": "That's",
+"start": 7.076,
+"end": 7.367
+},
+{
+"word": "why",
+"start": 7.367,
+"end": 7.471
+},
+{
+"word": "soda",
+"start": 7.482,
+"end": 7.721
+},
+{
+"word": "is",
+"start": 7.721,
+"end": 7.95
+},
+{
+"word": "banned",
+"start": 7.95,
+"end": 8.179
+},
+{
+"word": "in",
+"start": 8.179,
+"end": 8.387
+},
+{
+"word": "thirty",
+"start": 8.387,
+"end": 8.533
+},
+{
+"word": "countries.",
+"start": 8.533,
+"end": 8.866
+},
+{
+"word": "Roller",
+"start": 9.011,
+"end": 9.365
+},
+{
+"word": "coasters",
+"start": 9.365,
+"end": 9.594
+},
+{
+"word": "have",
+"start": 9.594,
+"end": 9.802
+},
+{
+"word": "toddler-and-ant",
+"start": 9.802,
+"end": 10.489
+},
+{
+"word": "seatbelts.",
+"start": 10.489,
+"end": 11.051
+},
+{
+"word": "And",
+"start": 11.165,
+"end": 11.384
+},
+{
+"word": "my",
+"start": 11.384,
+"end": 11.488
+},
+{
+"word": "uncle",
+"start": 11.488,
+"end": 11.717
+},
+{
+"word": "hiccuped",
+"start": 11.717,
+"end": 12.112
+},
+{
+"word": "five",
+"start": 12.112,
+"end": 12.237
+},
+{
+"word": "times",
+"start": 12.237,
+"end": 12.508
+},
+{
+"word": "at",
+"start": 12.508,
+"end": 12.695
+},
+{
+"word": "his",
+"start": 12.695,
+"end": 12.778
+},
+{
+"word": "wedding,",
+"start": 12.778,
+"end": 13.132
+},
+{
+"word": "so",
+"start": 13.132,
+"end": 13.215
+},
+{
+"word": "his",
+"start": 13.215,
+"end": 13.361
+},
+{
+"word": "bride",
+"start": 13.361,
+"end": 13.59
+},
+{
+"word": "carried",
+"start": 13.632,
+"end": 13.881
+},
+{
+"word": "him",
+"start": 13.881,
+"end": 14.006
+},
+{
+"word": "in",
+"start": 14.006,
+"end": 14.131
+},
+{
+"word": "her",
+"start": 14.131,
+"end": 14.214
+},
+{
+"word": "purse.",
+"start": 14.214,
+"end": 14.631
+},
+{
+"word": "But",
+"start": 14.526,
+"end": 14.693
+},
+{
+"word": "I",
+"start": 14.693,
+"end": 14.797
+},
+{
+"word": "have",
+"start": 14.797,
+"end": 14.922
+},
+{
+"word": "chronic",
+"start": 14.922,
+"end": 15.172
+},
+{
+"word": "allergies",
+"start": 15.172,
+"end": 15.546
+},
+{
+"word": "and",
+"start": 15.546,
+"end": 15.775
+},
+{
+"word": "I",
+"start": 15.775,
+"end": 15.9
+},
+{
+"word": "love",
+"start": 15.9,
+"end": 16.067
+},
+{
+"word": "fizzy",
+"start": 16.067,
+"end": 16.316
+},
+{
+"word": "soda.",
+"start": 16.316,
+"end": 16.691
+},
+{
+"word": "And",
+"start": 16.587,
+"end": 16.795
+},
+{
+"word": "yesterday,",
+"start": 16.795,
+"end": 17.315
+},
+{
+"word": "the",
+"start": 17.315,
+"end": 17.44
+},
+{
+"word": "school",
+"start": 17.44,
+"end": 17.565
+},
+{
+"word": "bully,",
+"start": 17.565,
+"end": 18.002
+},
+{
+"word": "Crusher",
+"start": 18.002,
+"end": 18.231
+},
+{
+"word": "Carl,",
+"start": 18.231,
+"end": 18.689
+},
+{
+"word": "dared",
+"start": 18.689,
+"end": 18.814
+},
+{
+"word": "me",
+"start": 18.814,
+"end": 18.959
+},
+{
+"word": "to",
+"start": 18.959,
+"end": 19.105
+},
+{
+"word": "chug",
+"start": 19.105,
+"end": 19.271
+},
+{
+"word": "a",
+"start": 19.271,
+"end": 19.417
+},
+{
+"word": "two-liter",
+"start": 19.417,
+"end": 19.729
+},
+{
+"word": "Mega-Fizz",
+"start": 19.729,
+"end": 20.229
+},
+{
+"word": "in",
+"start": 20.229,
+"end": 20.437
+},
+{
+"word": "front",
+"start": 20.437,
+"end": 20.541
+},
+{
+"word": "of",
+"start": 20.541,
+"end": 20.645
+},
+{
+"word": "the",
+"start": 20.645,
+"end": 20.728
+},
+{
+"word": "whole",
+"start": 20.728,
+"end": 20.832
+},
+{
+"word": "cafeteria.",
+"start": 20.832,
+"end": 21.249
+},
+{
+"word": "I",
+"start": 21.457,
+"end": 21.644
+},
+{
+"word": "slammed",
+"start": 21.644,
+"end": 21.852
+},
+{
+"word": "the",
+"start": 21.852,
+"end": 22.019
+},
+{
+"word": "empty",
+"start": 22.019,
+"end": 22.227
+},
+{
+"word": "bottle",
+"start": 22.227,
+"end": 22.456
+},
+{
+"word": "down.",
+"start": 22.456,
+"end": 22.747
+},
+{
+"word": "Everyone",
+"start": 23.122,
+"end": 23.392
+},
+{
+"word": "cheered!",
+"start": 23.392,
+"end": 23.788
+},
+{
+"word": "Then",
+"start": 23.85,
+"end": 24.017
+},
+{
+"word": "my",
+"start": 24.017,
+"end": 24.162
+},
+{
+"word": "throat",
+"start": 24.162,
+"end": 24.37
+},
+{
+"word": "tickled.",
+"start": 24.37,
+"end": 24.849
+},
+{
+"word": "Hic!",
+"start": 24.828,
+"end": 25.099
+},
+{
+"word": "Poof!",
+"start": 25.109,
+"end": 25.432
+},
+{
+"word": "My",
+"start": 25.109,
+"end": 25.64
+},
+{
+"word": "clothes",
+"start": 25.64,
+"end": 25.931
+},
+{
+"word": "collapsed",
+"start": 25.931,
+"end": 26.223
+},
+{
+"word": "into",
+"start": 26.223,
+"end": 26.451
+},
+{
+"word": "a",
+"start": 26.451,
+"end": 26.597
+},
+{
+"word": "giant",
+"start": 26.597,
+"end": 26.826
+},
+{
+"word": "circus",
+"start": 26.826,
+"end": 27.097
+},
+{
+"word": "tent.",
+"start": 27.097,
+"end": 27.471
+},
+{
+"word": "I",
+"start": 27.409,
+"end": 27.575
+},
+{
+"word": "was",
+"start": 27.575,
+"end": 27.721
+},
+{
+"word": "three",
+"start": 27.721,
+"end": 27.867
+},
+{
+"word": "feet",
+"start": 27.867,
+"end": 28.075
+},
+{
+"word": "tall!",
+"start": 28.075,
+"end": 28.533
+},
+{
+"word": "Hic!",
+"start": 28.429,
+"end": 28.72
+},
+{
+"word": "Poof!",
+"start": 28.71,
+"end": 29.095
+},
+{
+"word": "Now",
+"start": 28.71,
+"end": 29.24
+},
+{
+"word": "I",
+"start": 29.24,
+"end": 29.365
+},
+{
+"word": "was",
+"start": 29.365,
+"end": 29.469
+},
+{
+"word": "the",
+"start": 29.469,
+"end": 29.594
+},
+{
+"word": "size",
+"start": 29.594,
+"end": 29.761
+},
+{
+"word": "of",
+"start": 29.761,
+"end": 29.885
+},
+{
+"word": "a",
+"start": 29.885,
+"end": 29.989
+},
+{
+"word": "sneaker!",
+"start": 29.989,
+"end": 30.343
+},
+{
+"word": "Carl",
+"start": 30.291,
+"end": 30.531
+},
+{
+"word": "laughed",
+"start": 30.531,
+"end": 30.843
+},
+{
+"word": "and",
+"start": 30.843,
+"end": 30.988
+},
+{
+"word": "pointed.",
+"start": 30.988,
+"end": 31.405
+},
+{
+"word": "Look",
+"start": 31.405,
+"end": 31.509
+},
+{
+"word": "at",
+"start": 31.509,
+"end": 31.634
+},
+{
+"word": "the",
+"start": 31.634,
+"end": 31.717
+},
+{
+"word": "tiny",
+"start": 31.717,
+"end": 31.862
+},
+{
+"word": "bug!",
+"start": 31.862,
+"end": 32.362
+},
+{
+"word": "He",
+"start": 32.362,
+"end": 32.466
+},
+{
+"word": "slammed",
+"start": 32.466,
+"end": 32.674
+},
+{
+"word": "his",
+"start": 32.674,
+"end": 32.903
+},
+{
+"word": "giant",
+"start": 32.903,
+"end": 33.153
+},
+{
+"word": "boot",
+"start": 33.153,
+"end": 33.382
+},
+{
+"word": "down",
+"start": 33.382,
+"end": 33.59
+},
+{
+"word": "to",
+"start": 33.59,
+"end": 33.756
+},
+{
+"word": "stomp",
+"start": 33.756,
+"end": 33.964
+},
+{
+"word": "me!",
+"start": 33.964,
+"end": 34.297
+},
+{
+"word": "Stomp!",
+"start": 34.318,
+"end": 34.839
+},
+{
+"word": "I",
+"start": 34.381,
+"end": 35.047
+},
+{
+"word": "dodged,",
+"start": 35.047,
+"end": 35.525
+},
+{
+"word": "but",
+"start": 35.525,
+"end": 35.588
+},
+{
+"word": "the",
+"start": 35.588,
+"end": 35.692
+},
+{
+"word": "shockwave",
+"start": 35.692,
+"end": 36.087
+},
+{
+"word": "threw",
+"start": 36.087,
+"end": 36.254
+},
+{
+"word": "me",
+"start": 36.254,
+"end": 36.379
+},
+{
+"word": "through",
+"start": 36.379,
+"end": 36.524
+},
+{
+"word": "the",
+"start": 36.524,
+"end": 36.67
+},
+{
+"word": "air.",
+"start": 36.67,
+"end": 37.045
+},
+{
+"word": "Splat!",
+"start": 37.045,
+"end": 37.398
+},
+{
+"word": "Right",
+"start": 37.398,
+"end": 37.523
+},
+{
+"word": "into",
+"start": 37.523,
+"end": 37.711
+},
+{
+"word": "a",
+"start": 37.711,
+"end": 37.835
+},
+{
+"word": "bowl",
+"start": 37.835,
+"end": 37.981
+},
+{
+"word": "of",
+"start": 37.981,
+"end": 38.127
+},
+{
+"word": "cafeteria",
+"start": 38.127,
+"end": 38.376
+},
+{
+"word": "chili.",
+"start": 38.376,
+"end": 38.98
+},
+{
+"word": "Hic!",
+"start": 38.98,
+"end": 39.292
+},
+{
+"word": "Poof!",
+"start": 39.292,
+"end": 39.625
+},
+{
+"word": "Now",
+"start": 39.625,
+"end": 39.75
+},
+{
+"word": "I",
+"start": 39.75,
+"end": 39.875
+},
+{
+"word": "was",
+"start": 39.875,
+"end": 40.0
+},
+{
+"word": "two",
+"start": 40.0,
+"end": 40.125
+},
+{
+"word": "inches",
+"start": 40.125,
+"end": 40.333
+},
+{
+"word": "tall!",
+"start": 40.333,
+"end": 40.77
+},
+{
+"word": "The",
+"start": 40.77,
+"end": 40.853
+},
+{
+"word": "lunch",
+"start": 40.853,
+"end": 40.999
+},
+{
+"word": "lady",
+"start": 40.999,
+"end": 41.186
+},
+{
+"word": "picked",
+"start": 41.186,
+"end": 41.415
+},
+{
+"word": "up",
+"start": 41.415,
+"end": 41.581
+},
+{
+"word": "the",
+"start": 41.581,
+"end": 41.665
+},
+{
+"word": "ladle",
+"start": 41.665,
+"end": 41.873
+},
+{
+"word": "with",
+"start": 41.873,
+"end": 42.039
+},
+{
+"word": "me",
+"start": 42.039,
+"end": 42.143
+},
+{
+"word": "in",
+"start": 42.143,
+"end": 42.31
+},
+{
+"word": "it!",
+"start": 42.31,
+"end": 42.435
+},
+{
+"word": "She",
+"start": 42.435,
+"end": 42.539
+},
+{
+"word": "dumped",
+"start": 42.539,
+"end": 42.747
+},
+{
+"word": "the",
+"start": 42.539,
+"end": 42.893
+},
+{
+"word": "chili",
+"start": 42.893,
+"end": 43.101
+},
+{
+"word": "onto",
+"start": 43.101,
+"end": 43.309
+},
+{
+"word": "Buster’s",
+"start": 43.309,
+"end": 43.683
+},
+{
+"word": "tray,",
+"start": 43.683,
+"end": 44.037
+},
+{
+"word": "the",
+"start": 44.037,
+"end": 44.162
+},
+{
+"word": "school",
+"start": 44.162,
+"end": 44.349
+},
+{
+"word": "guard",
+"start": 44.349,
+"end": 44.62
+},
+{
+"word": "dog.",
+"start": 44.62,
+"end": 44.932
+},
+{
+"word": "Buster",
+"start": 44.932,
+"end": 45.182
+},
+{
+"word": "sniffed.",
+"start": 45.182,
+"end": 45.64
+},
+{
+"word": "He",
+"start": 45.64,
+"end": 45.723
+},
+{
+"word": "growled.",
+"start": 45.723,
+"end": 46.139
+},
+{
+"word": "His",
+"start": 46.295,
+"end": 46.514
+},
+{
+"word": "giant",
+"start": 46.514,
+"end": 46.805
+},
+{
+"word": "pink",
+"start": 46.805,
+"end": 46.992
+},
+{
+"word": "tongue",
+"start": 46.992,
+"end": 47.242
+},
+{
+"word": "came",
+"start": 47.242,
+"end": 47.492
+},
+{
+"word": "swooping",
+"start": 47.523,
+"end": 47.783
+},
+{
+"word": "down!",
+"start": 47.783,
+"end": 48.283
+},
+{
+"word": "Whoosh!",
+"start": 48.283,
+"end": 48.678
+},
+{
+"word": "Hic!",
+"start": 48.678,
+"end": 48.99
+},
+{
+"word": "Poof!",
+"start": 48.99,
+"end": 49.323
+},
+{
+"word": "I",
+"start": 49.323,
+"end": 49.427
+},
+{
+"word": "shrank",
+"start": 49.427,
+"end": 49.656
+},
+{
+"word": "again!",
+"start": 49.656,
+"end": 50.114
+},
+{
+"word": "Now",
+"start": 50.114,
+"end": 50.239
+},
+{
+"word": "I",
+"start": 50.239,
+"end": 50.343
+},
+{
+"word": "was",
+"start": 50.343,
+"end": 50.489
+},
+{
+"word": "the",
+"start": 50.489,
+"end": 50.593
+},
+{
+"word": "size",
+"start": 50.593,
+"end": 50.759
+},
+{
+"word": "of",
+"start": 50.759,
+"end": 50.926
+},
+{
+"word": "a",
+"start": 50.926,
+"end": 50.988
+},
+{
+"word": "flea,",
+"start": 50.988,
+"end": 51.342
+},
+{
+"word": "clinging",
+"start": 51.28,
+"end": 51.55
+},
+{
+"word": "to",
+"start": 51.55,
+"end": 51.654
+},
+{
+"word": "Buster's",
+"start": 51.654,
+"end": 51.966
+},
+{
+"word": "wet",
+"start": 51.966,
+"end": 52.112
+},
+{
+"word": "nose!",
+"start": 52.112,
+"end": 52.591
+},
+{
+"word": "Buster",
+"start": 52.591,
+"end": 52.778
+},
+{
+"word": "took",
+"start": 52.778,
+"end": 52.965
+},
+{
+"word": "a",
+"start": 52.965,
+"end": 53.09
+},
+{
+"word": "giant",
+"start": 53.09,
+"end": 53.257
+},
+{
+"word": "breath.",
+"start": 53.257,
+"end": 53.735
+},
+{
+"word": "He",
+"start": 53.735,
+"end": 53.777
+},
+{
+"word": "was",
+"start": 53.777,
+"end": 53.902
+},
+{
+"word": "about",
+"start": 53.902,
+"end": 54.048
+},
+{
+"word": "to",
+"start": 54.048,
+"end": 54.235
+},
+{
+"word": "sneeze!",
+"start": 54.235,
+"end": 54.672
+},
+{
+"word": "Then",
+"start": 54.672,
+"end": 54.755
+},
+{
+"word": "I",
+"start": 54.755,
+"end": 54.859
+},
+{
+"word": "noticed",
+"start": 54.859,
+"end": 55.088
+},
+{
+"word": "something.",
+"start": 54.859,
+"end": 55.525
+},
+{
+"word": "In",
+"start": 55.525,
+"end": 55.65
+},
+{
+"word": "our",
+"start": 55.65,
+"end": 55.775
+},
+{
+"word": "world,",
+"start": 55.775,
+"end": 56.15
+},
+{
+"word": "if",
+"start": 56.15,
+"end": 56.212
+},
+{
+"word": "hiccups",
+"start": 56.212,
+"end": 56.462
+},
+{
+"word": "shrink",
+"start": 56.462,
+"end": 56.67
+},
+{
+"word": "you...",
+"start": 56.67,
+"end": 57.128
+},
+{
+"word": "scaring",
+"start": 57.128,
+"end": 57.336
+},
+{
+"word": "away",
+"start": 57.336,
+"end": 57.606
+},
+{
+"word": "hiccups",
+"start": 57.606,
+"end": 57.919
+},
+{
+"word": "grows",
+"start": 57.919,
+"end": 58.147
+},
+{
+"word": "you",
+"start": 58.147,
+"end": 58.272
+},
+{
+"word": "back",
+"start": 58.272,
+"end": 58.46
+},
+{
+"word": "instantly!",
+"start": 58.46,
+"end": 59.063
+},
+{
+"word": "And",
+"start": 58.876,
+"end": 59.126
+},
+{
+"word": "Buster’s",
+"start": 59.126,
+"end": 59.459
+},
+{
+"word": "nose",
+"start": 59.459,
+"end": 59.646
+},
+{
+"word": "was",
+"start": 59.646,
+"end": 59.854
+},
+{
+"word": "covered",
+"start": 59.854,
+"end": 60.062
+},
+{
+"word": "in",
+"start": 60.062,
+"end": 60.208
+},
+{
+"word": "black",
+"start": 60.208,
+"end": 60.353
+},
+{
+"word": "pepper",
+"start": 60.353,
+"end": 60.624
+},
+{
+"word": "from",
+"start": 60.624,
+"end": 60.811
+},
+{
+"word": "the",
+"start": 60.811,
+"end": 60.915
+},
+{
+"word": "chili!",
+"start": 60.915,
+"end": 61.29
+},
+{
+"word": "I",
+"start": 61.207,
+"end": 61.352
+},
+{
+"word": "crawled",
+"start": 61.352,
+"end": 61.623
+},
+{
+"word": "into",
+"start": 61.623,
+"end": 61.748
+},
+{
+"word": "Buster's",
+"start": 61.748,
+"end": 62.122
+},
+{
+"word": "nostril",
+"start": 62.122,
+"end": 62.372
+},
+{
+"word": "and",
+"start": 62.372,
+"end": 62.58
+},
+{
+"word": "tickled",
+"start": 62.58,
+"end": 62.83
+},
+{
+"word": "his",
+"start": 62.83,
+"end": 62.976
+},
+{
+"word": "nose",
+"start": 62.976,
+"end": 63.163
+},
+{
+"word": "hair.",
+"start": 63.163,
+"end": 63.413
+},
+{
+"word": "Ah...",
+"start": 63.392,
+"end": 63.683
+},
+{
+"word": "ah...",
+"start": 63.683,
+"end": 63.975
+},
+{
+"word": "CHOO!",
+"start": 63.975,
+"end": 64.349
+},
+{
+"word": "The",
+"start": 63.975,
+"end": 64.453
+},
+{
+"word": "sneeze",
+"start": 64.453,
+"end": 64.641
+},
+{
+"word": "launched",
+"start": 64.641,
+"end": 64.953
+},
+{
+"word": "me",
+"start": 64.953,
+"end": 65.078
+},
+{
+"word": "like",
+"start": 65.078,
+"end": 65.244
+},
+{
+"word": "a",
+"start": 65.244,
+"end": 65.348
+},
+{
+"word": "rocket",
+"start": 65.348,
+"end": 65.577
+},
+{
+"word": "straight",
+"start": 65.671,
+"end": 65.848
+},
+{
+"word": "at",
+"start": 65.848,
+"end": 66.014
+},
+{
+"word": "Crusher",
+"start": 66.014,
+"end": 66.264
+},
+{
+"word": "Carl's",
+"start": 66.264,
+"end": 66.597
+},
+{
+"word": "face.",
+"start": 66.597,
+"end": 66.888
+},
+{
+"word": "Carl",
+"start": 67.107,
+"end": 67.388
+},
+{
+"word": "saw",
+"start": 67.388,
+"end": 67.638
+},
+{
+"word": "a",
+"start": 67.638,
+"end": 67.783
+},
+{
+"word": "flying",
+"start": 67.783,
+"end": 68.033
+},
+{
+"word": "speck",
+"start": 68.064,
+"end": 68.283
+},
+{
+"word": "heading",
+"start": 68.303,
+"end": 68.512
+},
+{
+"word": "for",
+"start": 68.512,
+"end": 68.678
+},
+{
+"word": "his",
+"start": 68.678,
+"end": 68.824
+},
+{
+"word": "eyeball",
+"start": 68.824,
+"end": 69.074
+},
+{
+"word": "and",
+"start": 69.074,
+"end": 69.344
+},
+{
+"word": "screamed",
+"start": 69.344,
+"end": 69.594
+},
+{
+"word": "in",
+"start": 69.594,
+"end": 69.802
+},
+{
+"word": "absolute",
+"start": 69.802,
+"end": 70.114
+},
+{
+"word": "terror!",
+"start": 70.114,
+"end": 70.53
+},
+{
+"word": "AAAHHH!",
+"start": 70.842,
+"end": 71.28
+},
+{
+"word": "The",
+"start": 70.842,
+"end": 71.425
+},
+{
+"word": "scream",
+"start": 71.425,
+"end": 71.675
+},
+{
+"word": "scared",
+"start": 71.675,
+"end": 71.925
+},
+{
+"word": "my",
+"start": 71.925,
+"end": 72.133
+},
+{
+"word": "hiccups",
+"start": 72.133,
+"end": 72.383
+},
+{
+"word": "away!",
+"start": 72.383,
+"end": 72.799
+},
+{
+"word": "BOOM!",
+"start": 72.736,
+"end": 72.965
+},
+{
+"word": "I",
+"start": 72.736,
+"end": 73.257
+},
+{
+"word": "expanded",
+"start": 73.34,
+"end": 73.61
+},
+{
+"word": "in",
+"start": 73.61,
+"end": 73.819
+},
+{
+"word": "mid-air",
+"start": 73.819,
+"end": 74.047
+},
+{
+"word": "like",
+"start": 74.047,
+"end": 74.276
+},
+{
+"word": "an",
+"start": 74.276,
+"end": 74.38
+},
+{
+"word": "airbag!",
+"start": 74.38,
+"end": 74.901
+},
+{
+"word": "I",
+"start": 74.797,
+"end": 74.963
+},
+{
+"word": "slammed",
+"start": 74.963,
+"end": 75.171
+},
+{
+"word": "into",
+"start": 75.171,
+"end": 75.4
+},
+{
+"word": "Carl,",
+"start": 75.4,
+"end": 75.879
+},
+{
+"word": "knocking",
+"start": 75.879,
+"end": 76.004
+},
+{
+"word": "him",
+"start": 76.004,
+"end": 76.17
+},
+{
+"word": "headfirst",
+"start": 76.295,
+"end": 76.503
+},
+{
+"word": "into",
+"start": 76.503,
+"end": 76.691
+},
+{
+"word": "the",
+"start": 76.691,
+"end": 76.836
+},
+{
+"word": "trash",
+"start": 76.836,
+"end": 77.065
+},
+{
+"word": "can.",
+"start": 77.065,
+"end": 77.377
+},
+{
+"word": "The",
+"start": 77.294,
+"end": 77.44
+},
+{
+"word": "whole",
+"start": 77.44,
+"end": 77.565
+},
+{
+"word": "cafeteria",
+"start": 77.565,
+"end": 77.981
+},
+{
+"word": "erupted",
+"start": 77.981,
+"end": 78.439
+},
+{
+"word": "in",
+"start": 78.439,
+"end": 78.626
+},
+{
+"word": "cheers!",
+"start": 78.626,
+"end": 78.855
+},
+{
+"word": "Carl",
+"start": 79.188,
+"end": 79.479
+},
+{
+"word": "climbed",
+"start": 79.479,
+"end": 79.75
+},
+{
+"word": "out",
+"start": 79.75,
+"end": 79.937
+},
+{
+"word": "of",
+"start": 79.937,
+"end": 80.062
+},
+{
+"word": "the",
+"start": 80.062,
+"end": 80.124
+},
+{
+"word": "trash,",
+"start": 80.124,
+"end": 80.561
+},
+{
+"word": "covered",
+"start": 80.561,
+"end": 80.707
+},
+{
+"word": "in",
+"start": 80.707,
+"end": 80.853
+},
+{
+"word": "old",
+"start": 80.853,
+"end": 81.019
+},
+{
+"word": "noodles.",
+"start": 81.019,
+"end": 81.29
+},
+{
+"word": "He",
+"start": 81.415,
+"end": 81.54
+},
+{
+"word": "glared",
+"start": 81.54,
+"end": 81.769
+},
+{
+"word": "at",
+"start": 81.769,
+"end": 81.893
+},
+{
+"word": "me,",
+"start": 81.893,
+"end": 82.226
+},
+{
+"word": "trembling",
+"start": 82.226,
+"end": 82.351
+},
+{
+"word": "with",
+"start": 82.351,
+"end": 82.58
+},
+{
+"word": "rage.",
+"start": 82.58,
+"end": 83.017
+},
+{
+"word": "Then",
+"start": 82.934,
+"end": 83.1
+},
+{
+"word": "Carl",
+"start": 83.1,
+"end": 83.371
+},
+{
+"word": "hiccuped.",
+"start": 83.371,
+"end": 83.871
+},
+{
+"word": "Hic!",
+"start": 83.371,
+"end": 84.12
+},
+{
+"word": "Poof!",
+"start": 84.089,
+"end": 84.391
+},
+{
+"word": "Carl",
+"start": 84.089,
+"end": 84.661
+},
+{
+"word": "shrank",
+"start": 84.661,
+"end": 84.932
+},
+{
+"word": "to",
+"start": 84.932,
+"end": 85.078
+},
+{
+"word": "the",
+"start": 85.078,
+"end": 85.182
+},
+{
+"word": "size",
+"start": 85.182,
+"end": 85.348
+},
+{
+"word": "of",
+"start": 85.348,
+"end": 85.473
+},
+{
+"word": "a",
+"start": 85.473,
+"end": 85.577
+},
+{
+"word": "teacup.",
+"start": 85.577,
+"end": 85.827
+},
+{
+"word": "Buster",
+"start": 85.91,
+"end": 86.181
+},
+{
+"word": "the",
+"start": 86.181,
+"end": 86.305
+},
+{
+"word": "dog",
+"start": 86.305,
+"end": 86.514
+},
+{
+"word": "walked",
+"start": 86.514,
+"end": 86.743
+},
+{
+"word": "over,",
+"start": 86.743,
+"end": 87.138
+},
+{
+"word": "wagging",
+"start": 87.138,
+"end": 87.346
+},
+{
+"word": "his",
+"start": 87.346,
+"end": 87.492
+},
+{
+"word": "tail.",
+"start": 87.492,
+"end": 88.283
+},
+{
+"word": "Sit,",
+"start": 87.846,
+"end": 88.199
+},
+{
+"word": "tiny",
+"start": 88.199,
+"end": 88.407
+},
+{
+"word": "Carl.",
+"start": 88.407,
+"end": 89.094
+},
+{
+"word": "Good",
+"start": 88.407,
+"end": 88.928
+},
+{
+"word": "boy.",
+"start": 88.928,
+"end": 89.302
+}
+]

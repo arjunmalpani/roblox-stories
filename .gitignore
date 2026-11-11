@@ -12,6 +12,9 @@ videos/**/frames/
 videos/**/out/
 videos/**/still/
 videos/**/full.jpg
+videos/**/audio/raw_fast.wav
+videos/**/audio/trimmed.wav
+videos/**/render_log_*.txt
 *.blend1
 *.tmp
 .DS_Store
