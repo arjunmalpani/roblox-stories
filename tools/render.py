@@ -62,6 +62,7 @@ for i in ids:
             sc = bpy.context.scene
             sc.render.filepath = os.path.join(vdir, "frames", "")
             bpy.ops.wm.save_as_mainfile(filepath=os.path.join(vdir, "blend", f"shot_{i:02d}.blend"), copy=True)
+            say(f"Rendering shot {i:02d}/{len(ids)}: {S.get('desc', '')} ({F(S['t1'])-F(S['t0'])} frames)...")
             bpy.ops.render.render(animation=True)
         elif mode == "cues":
             S = V.build(i, samples=1, pct=10)

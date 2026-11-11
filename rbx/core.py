@@ -42,32 +42,53 @@ def reset():
 
 def setup_render(f0, f1, res=(1080, 1920), samples=24, pct=100, blur=True):
     sc = bpy.context.scene
-    try:
-        sc.render.engine = "BLENDER_EEVEE"
-    except TypeError as e:
-        print(e)
+    engine = os.environ.get("BLENDER_ENGINE", "BLENDER_EEVEE").upper()
+    if engine in ("CYCLES", "BLENDER_CYCLES"):
+        sc.render.engine = "CYCLES"
+        sc.cycles.device = "GPU"
+        try:
+            cprefs = bpy.context.preferences.addons['cycles'].preferences
+            for dev_type in ('OPTIX', 'CUDA'):
+                try:
+                    cprefs.compute_device_type = dev_type
+                    cprefs.get_devices()
+                    for d in cprefs.devices:
+                        if d.type == dev_type:
+                            d.use = True
+                    break
+                except Exception:
+                    pass
+            sc.cycles.samples = samples or 24
+            sc.cycles.use_denoising = True
+        except Exception as e:
+            print("Cycles GPU setup:", e)
+    else:
+        try:
+            sc.render.engine = "BLENDER_EEVEE"
+        except TypeError as e:
+            print(e)
+        ee = sc.eevee
+        ee.taa_render_samples = samples
+        ee.taa_samples = 8
+        ee.use_raytracing = True
+        ee.use_shadows = True
+        try:
+            ee.ray_tracing_options.resolution_scale = "2"
+        except Exception:
+            pass
+        ee.volumetric_samples = 32
+        ee.use_volumetric_shadows = True
+        try:
+            sc.render.motion_blur_shutter = 0.5
+            ee.motion_blur_steps = 1
+        except Exception:
+            pass
     sc.render.resolution_x, sc.render.resolution_y = res
     sc.render.resolution_percentage = pct
     sc.render.fps = FPS
     sc.frame_start, sc.frame_end = f0, f1
     sc.frame_set(f0)
-    ee = sc.eevee
-    ee.taa_render_samples = samples
-    ee.taa_samples = 8
-    ee.use_raytracing = True
-    ee.use_shadows = True
-    try:
-        ee.ray_tracing_options.resolution_scale = "2"
-    except Exception:
-        pass
-    ee.volumetric_samples = 32
-    ee.use_volumetric_shadows = True
     sc.render.use_motion_blur = blur
-    try:
-        sc.render.motion_blur_shutter = 0.5
-        ee.motion_blur_steps = 1
-    except Exception:
-        pass
     sc.render.film_transparent = False
     vs = sc.view_settings
     for vt in ("AgX", "Filmic", "Standard"):
