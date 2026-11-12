@@ -21,12 +21,19 @@ cmd = [b, "-b", "--factory-startup", "-P", os.path.join(kit.STUDIO, "tools", "re
 import platform, shutil
 if platform.system() == "Linux" and not os.environ.get("DISPLAY") and shutil.which("xvfb-run"):
     cmd = ["xvfb-run", "-a", "-s", "-screen 0 1920x1080x24 +extension GLX +render"] + cmd
-NOISE = re.compile(r"(\| Saved:|Fra:\d|^\d\d:\d\d\.\d+\s+\w+\s+\||^Blender \d|^Read prefs|^Warning: |^Color management|^Time: |^$)")
+NOISE = re.compile(r"(^Blender \d|^Read prefs|^Warning: |^Color management|^Time: |^$)")
 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
 show_rest = False
 for line in p.stdout:
     if ("FAILED" in line or "Traceback" in line or ("Error" in line and "HIPEW" not in line and "HIP dynamic" not in line)):
         show_rest = True
-    if verbose or show_rest or not NOISE.search(line) or "Rendering shot" in line or "-> Shot" in line:
+    # Clean up and show frame saves nicely so the user knows it's actively working
+    if "Saved:" in line:
+        frame_match = re.search(r"(\d{4})\.png", line)
+        if frame_match:
+            sys.stdout.write(f"  ↳ Rendered frame {frame_match.group(1)}\n")
+            sys.stdout.flush()
+            continue
+    if verbose or show_rest or not NOISE.search(line):
         sys.stdout.write(line); sys.stdout.flush()
 sys.exit(p.wait())
