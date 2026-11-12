@@ -41,77 +41,165 @@ def reset():
         pass
 
 
-def setup_render(f0, f1, res=(1080, 1920), samples=24, pct=100, blur=True):
+
+def setup_render(f0, f1, res=(1080, 1920), samples=24, pct=100, blur=False):
     sc = bpy.context.scene
+
     engine = os.environ.get("BLENDER_ENGINE", "BLENDER_EEVEE").upper()
+
+    # --------------------------------------------------
+    # CYCLES - GPU OPTIMIZED
+    # --------------------------------------------------
     if engine in ("CYCLES", "BLENDER_CYCLES"):
         sc.render.engine = "CYCLES"
         sc.cycles.device = "GPU"
-        try:
-            cprefs = bpy.context.preferences.addons['cycles'].preferences
-            for dev_type in ('OPTIX', 'CUDA'):
-                try:
-                    cprefs.compute_device_type = dev_type
-                    cprefs.get_devices()
+
+        cprefs = bpy.context.preferences.addons["cycles"].preferences
+        selected_backend = None
+
+        # Prefer OptiX, fallback to CUDA
+        for dev_type in ("OPTIX", "CUDA"):
+            try:
+                cprefs.compute_device_type = dev_type
+                cprefs.get_devices()
+
+                devices = [
+                    d for d in cprefs.devices
+                    if d.type == dev_type
+                ]
+
+                if devices:
                     for d in cprefs.devices:
-                        if d.type == dev_type:
-                            d.use = True
+                        d.use = d.type == dev_type
+
+                    selected_backend = dev_type
                     break
-                except Exception:
-                    pass
-            sc.cycles.samples = samples or 24
-            sc.cycles.use_denoising = True
-        except Exception as e:
-            print("Cycles GPU setup:", e)
+
+            except Exception as e:
+                print(f"{dev_type} unavailable: {e}")
+
+        if selected_backend is None:
+            raise RuntimeError(
+                "No supported NVIDIA GPU found for Cycles!"
+            )
+
+        print(f"Cycles GPU backend: {selected_backend}")
+
+        # Sampling
+        sc.cycles.samples = samples or 24
+        sc.cycles.use_adaptive_sampling = True
+        sc.cycles.adaptive_threshold = 0.05
+
+        # Denoising
+        sc.cycles.use_denoising = True
+        try:
+            sc.cycles.denoiser = "OPTIX"
+        except Exception:
+            pass
+
+        # Reduce expensive ray bounces
+        sc.cycles.max_bounces = 4
+        sc.cycles.diffuse_bounces = 1
+        sc.cycles.glossy_bounces = 2
+        sc.cycles.transmission_bounces = 2
+
+        # Reduce unnecessary overhead
+        try:
+            sc.cycles.use_persistent_data = True
+        except Exception:
+            pass
+
+    # --------------------------------------------------
+    # EEVEE - FAST RENDERING
+    # --------------------------------------------------
     else:
         try:
             sc.render.engine = "BLENDER_EEVEE"
-        except TypeError as e:
-            print(e)
+        except TypeError:
+            sc.render.engine = "BLENDER_EEVEE_NEXT"
+
         ee = sc.eevee
-        ee.taa_render_samples = samples
+
+        # Anti-aliasing
+        ee.taa_render_samples = samples or 24
         ee.taa_samples = 8
-        ee.use_raytracing = True
+
+        # Disable expensive effects by default
+        ee.use_raytracing = False
         ee.use_shadows = True
+
         try:
-            ee.ray_tracing_options.resolution_scale = "2"
+            ee.volumetric_samples = 16
+            ee.use_volumetric_shadows = False
         except Exception:
             pass
-        ee.volumetric_samples = 32
-        ee.use_volumetric_shadows = True
+
+        # Motion blur is controlled below
         try:
-            sc.render.motion_blur_shutter = 0.5
             ee.motion_blur_steps = 1
         except Exception:
             pass
-    sc.render.resolution_x, sc.render.resolution_y = res
+
+    # --------------------------------------------------
+    # RESOLUTION & FRAME SETTINGS
+    # --------------------------------------------------
+    sc.render.resolution_x = res[0]
+    sc.render.resolution_y = res[1]
     sc.render.resolution_percentage = pct
+
     sc.render.fps = FPS
-    sc.frame_start, sc.frame_end = f0, f1
+    sc.frame_start = f0
+    sc.frame_end = f1
     sc.frame_set(f0)
+
+    # Motion blur
     sc.render.use_motion_blur = blur
+
+    # Output
     sc.render.film_transparent = False
+    sc.render.image_settings.file_format = "PNG"
+    sc.render.image_settings.color_mode = "RGB"
+
+    try:
+        sc.render.image_settings.compression = 15
+    except Exception:
+        pass
+
+    # --------------------------------------------------
+    # COLOR MANAGEMENT
+    # --------------------------------------------------
     vs = sc.view_settings
+
     for vt in ("AgX", "Filmic", "Standard"):
         try:
             vs.view_transform = vt
             break
         except TypeError:
             continue
-    for lk in ("AgX - Medium High Contrast", "Medium High Contrast", "None"):
+
+    for lk in (
+        "AgX - Medium High Contrast",
+        "Medium High Contrast",
+        "None"
+    ):
         try:
             vs.look = lk
             break
         except TypeError:
             continue
+
     vs.exposure = 0.0
-    sc.render.image_settings.file_format = "PNG"
-    sc.render.image_settings.color_mode = "RGB"
-    try:
-        sc.render.image_settings.compression = 15
-    except Exception:
-        pass
+
+    # --------------------------------------------------
+    # COMPOSITOR
+    # --------------------------------------------------
     setup_compositor()
+
+    print(
+        f"Render configured: {engine} | "
+        f"{res[0]}x{res[1]} @ {pct}% | "
+        f"Samples: {samples} | Blur: {blur}"
+    )
 
 
 def setup_compositor(bloom=0.35, threshold=1.0):
