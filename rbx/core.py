@@ -41,44 +41,102 @@ def reset():
         pass
 
 
-def setup_render(f0, f1, res=(1080, 1920), samples=24, pct=100, blur=True):
+def setup_render(f0, f1, res=(1080, 1920), samples=4, pct=100, blur=False):
     sc = bpy.context.scene
     engine = os.environ.get("BLENDER_ENGINE", "BLENDER_EEVEE").upper()
+
+    # --------------------------------------------------
+    # CYCLES - GPU OPTIMIZED
+    # --------------------------------------------------
     if engine in ("CYCLES", "BLENDER_CYCLES"):
         sc.render.engine = "CYCLES"
         sc.cycles.device = "GPU"
-        try:
-            cprefs = bpy.context.preferences.addons['cycles'].preferences
-            for dev_type in ('OPTIX', 'CUDA'):
-                try:
-                    cprefs.compute_device_type = dev_type
-                    cprefs.get_devices()
+
+        cprefs = bpy.context.preferences.addons["cycles"].preferences
+        selected_backend = None
+
+        # Prefer OptiX, fallback to CUDA
+        for dev_type in ("OPTIX", "CUDA"):
+            try:
+                cprefs.compute_device_type = dev_type
+                cprefs.get_devices()
+
+                devices = [
+                    d for d in cprefs.devices
+                    if d.type == dev_type
+                ]
+
+                if devices:
                     for d in cprefs.devices:
-                        if d.type == dev_type:
-                            d.use = True
+                        d.use = (d.type == dev_type)
+
+                    selected_backend = dev_type
                     break
-                except Exception:
-                    pass
-            sc.cycles.samples = samples or 24
-            sc.cycles.use_denoising = True
-        except Exception as e:
-            print("Cycles GPU setup:", e)
+
+            except Exception as e:
+                print(f"{dev_type} unavailable: {e}")
+
+        if selected_backend is None:
+            raise RuntimeError(
+                "No supported NVIDIA GPU found for Cycles!"
+            )
+
+        print(f"Cycles GPU backend: {selected_backend}")
+
+        # Sampling: 4 samples with AI denoiser is lightning fast and pristine for flat Roblox style
+        target_samples = int(os.environ.get("CYCLES_SAMPLES", "4"))
+        sc.cycles.samples = min(samples or 4, target_samples)
+        sc.cycles.preview_samples = 2
+        sc.cycles.use_adaptive_sampling = False
+
+        # Denoising
+        sc.cycles.use_denoising = True
+        try:
+            sc.cycles.denoiser = "OPTIX"
+        except Exception:
+            try:
+                sc.cycles.denoiser = "OPENIMAGEDENOISE"
+            except Exception:
+                pass
+
+        # Lightning fast bounces for low-poly Roblox cartoon shading
+        sc.cycles.max_bounces = 2
+        sc.cycles.diffuse_bounces = 1
+        sc.cycles.glossy_bounces = 1
+        sc.cycles.transmission_bounces = 0
+        sc.cycles.transparent_max_bounces = 2
+        sc.cycles.volume_bounces = 0
+        try:
+            sc.cycles.caustics_reflective = False
+            sc.cycles.caustics_refractive = False
+        except Exception:
+            pass
+
+        # Keep GPU memory persistent between frames (huge speedup for animations)
+        try:
+            sc.render.use_persistent_data = True
+        except Exception:
+            pass
+
+    # --------------------------------------------------
+    # EEVEE - FAST RENDERING
+    # --------------------------------------------------
     else:
         try:
             sc.render.engine = "BLENDER_EEVEE"
-        except TypeError as e:
-            print(e)
+        except TypeError:
+            sc.render.engine = "BLENDER_EEVEE_NEXT"
+
         ee = sc.eevee
-        ee.taa_render_samples = samples
+        ee.taa_render_samples = samples or 8
         ee.taa_samples = 8
-        ee.use_raytracing = True
+        ee.use_raytracing = False
         ee.use_shadows = True
         try:
-            ee.ray_tracing_options.resolution_scale = "2"
+            ee.volumetric_samples = 16
+            ee.use_volumetric_shadows = False
         except Exception:
             pass
-        ee.volumetric_samples = 32
-        ee.use_volumetric_shadows = True
         try:
             sc.render.motion_blur_shutter = 0.5
             ee.motion_blur_steps = 1

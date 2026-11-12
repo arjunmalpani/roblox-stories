@@ -58,12 +58,17 @@ for i in ids:
             sc.render.filepath = os.path.join(vdir, "preview", f"still_{i:02d}_{t:.2f}.png")
             bpy.ops.render.render(write_still=True)
         elif mode == "final":
-            S = V.build(i, samples=samples or 24, pct=100)
+            S = V.build(i, samples=samples or 4, pct=100)
             sc = bpy.context.scene
             sc.render.filepath = os.path.join(vdir, "frames", "")
             bpy.ops.wm.save_as_mainfile(filepath=os.path.join(vdir, "blend", f"shot_{i:02d}.blend"), copy=True)
-            say(f"Rendering shot {i:02d}/{len(ids)}: {S.get('desc', '')} ({F(S['t1'])-F(S['t0'])} frames)...")
+            total_frames = F(S["t1"]) - F(S["t0"])
+            say(f"Rendering shot {i:02d}/{len(ids)}: {S.get('desc', '')} ({total_frames} frames)...")
+            st_shot = time.time()
             bpy.ops.render.render(animation=True)
+            dur = time.time() - st_shot
+            fps = total_frames / max(dur, 0.001)
+            say(f"-> Shot {i:02d} rendered {total_frames} frames in {dur:.1f}s ({fps:.1f} fps)")
         elif mode == "cues":
             S = V.build(i, samples=1, pct=10)
             all_cues += [dict(c, shot=i) for c in CUES]

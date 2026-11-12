@@ -25,8 +25,8 @@ NOISE = re.compile(r"(\| Saved:|Fra:\d|^\d\d:\d\d\.\d+\s+\w+\s+\||^Blender \d|^R
 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace")
 show_rest = False
 for line in p.stdout:
-    if "FAILED" in line or "Traceback" in line or "Error" in line:
+    if ("FAILED" in line or "Traceback" in line or ("Error" in line and "HIPEW" not in line and "HIP dynamic" not in line)):
         show_rest = True
-    if verbose or show_rest or not NOISE.search(line):
+    if verbose or show_rest or not NOISE.search(line) or "Rendering shot" in line or "-> Shot" in line:
         sys.stdout.write(line); sys.stdout.flush()
 sys.exit(p.wait())
