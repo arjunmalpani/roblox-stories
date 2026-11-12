@@ -83,29 +83,30 @@ def setup_render(f0, f1, res=(1080, 1920), samples=4, pct=100, blur=False):
 
         print(f"Cycles GPU backend: {selected_backend}")
 
-        # Sampling: 4 samples with AI denoiser is lightning fast and pristine for flat Roblox style
+        # Sampling: 4 samples is lightning fast and pristine for flat Roblox style
         target_samples = int(os.environ.get("CYCLES_SAMPLES", "4"))
         sc.cycles.samples = min(samples or 4, target_samples)
         sc.cycles.preview_samples = 2
         sc.cycles.use_adaptive_sampling = False
 
-        # Denoising
-        sc.cycles.use_denoising = True
-        try:
-            sc.cycles.denoiser = "OPENIMAGEDENOISE"
-            sc.cycles.denoising_use_gpu = True
-        except Exception:
+        # Denoising: Disabled by default because OIDN on CPU adds ~2s per frame
+        # Enable only if explicitly requested via CYCLES_DENOISE=1
+        if os.environ.get("CYCLES_DENOISE", "0") == "1":
+            sc.cycles.use_denoising = True
             try:
                 sc.cycles.denoiser = "OPENIMAGEDENOISE"
+                sc.cycles.denoising_use_gpu = True
             except Exception:
                 pass
+        else:
+            sc.cycles.use_denoising = False
 
-        # Lightning fast bounces for low-poly Roblox cartoon shading
-        sc.cycles.max_bounces = 2
+        # Lightning fast direct light bounces for low-poly Roblox cartoon shading
+        sc.cycles.max_bounces = 1
         sc.cycles.diffuse_bounces = 1
-        sc.cycles.glossy_bounces = 1
+        sc.cycles.glossy_bounces = 0
         sc.cycles.transmission_bounces = 0
-        sc.cycles.transparent_max_bounces = 2
+        sc.cycles.transparent_max_bounces = 1
         sc.cycles.volume_bounces = 0
         try:
             sc.cycles.caustics_reflective = False
@@ -167,10 +168,13 @@ def setup_render(f0, f1, res=(1080, 1920), samples=4, pct=100, blur=False):
     sc.render.image_settings.file_format = "PNG"
     sc.render.image_settings.color_mode = "RGB"
     try:
-        sc.render.image_settings.compression = 15
+        sc.render.image_settings.compression = 0
     except Exception:
         pass
-    setup_compositor()
+    if os.environ.get("BLENDER_COMPOSITING", "0") == "1":
+        setup_compositor()
+    else:
+        sc.render.use_compositing = False
 
 
 def setup_compositor(bloom=0.35, threshold=1.0):

@@ -58,7 +58,8 @@ for i in ids:
             sc.render.filepath = os.path.join(vdir, "preview", f"still_{i:02d}_{t:.2f}.png")
             bpy.ops.render.render(write_still=True)
         elif mode == "final":
-            S = V.build(i, samples=samples or 4, pct=100)
+            pct = int(os.environ.get("RENDER_PCT", "100"))
+            S = V.build(i, samples=samples or 4, pct=pct)
             sc = bpy.context.scene
             sc.render.filepath = os.path.join(vdir, "frames", "")
             bpy.ops.wm.save_as_mainfile(filepath=os.path.join(vdir, "blend", f"shot_{i:02d}.blend"), copy=True)
