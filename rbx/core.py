@@ -1,4 +1,5 @@
 """Scene, material, primitive, keyframe and camera helpers."""
+import os
 import math
 import bmesh
 import bpy
