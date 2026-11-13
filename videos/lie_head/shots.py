@@ -334,7 +334,7 @@ def s18(t0, t1):
 def s19(t0, t1):
     W.hallway_day()
     W.sun(4.0)
-    E = eddie_big(t0, t1, head_scale=3.0, expr="screaming", loc=(0, 10, 0), rot=0)
+    E = eddie_big(t0, t1, head_scale=3.0, expr="scream", loc=(0, 10, 0), rot=0)
     cam = Cam()
     cam.push(t0, t1, (0, 10, 4.5), 3.0, 2.0, yaw=0, pitch=6, lens=30)
     cam.handheld(1.5)
@@ -382,7 +382,7 @@ def s22(t0, t1):
     cam = Cam()
     cam.push(t0, t1, (0, 10, 4.0), 7.0, 5.0, yaw=180, pitch=20, lens=24)
     cam.handheld(1.8)
-    sfx(t0, "screaming")
+    sfx(t0, "gasp")
     sfx(t0 + 0.3, "glitch")
 
 
