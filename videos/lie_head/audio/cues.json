@@ -1,0 +1,362 @@
+[
+ {
+  "t": 0.0,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 1
+ },
+ {
+  "t": 0.3,
+  "name": "alarm",
+  "vol": 1.0,
+  "shot": 1
+ },
+ {
+  "t": 2.154,
+  "name": "hammer",
+  "vol": 1.0,
+  "shot": 2
+ },
+ {
+  "t": 2.554,
+  "name": "gasp",
+  "vol": 1.0,
+  "shot": 2
+ },
+ {
+  "t": 4.842,
+  "name": "stomp",
+  "vol": 1.0,
+  "shot": 3
+ },
+ {
+  "t": 7.047,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 4
+ },
+ {
+  "t": 10.199,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 5
+ },
+ {
+  "t": 12.672,
+  "name": "paper",
+  "vol": 1.0,
+  "shot": 6
+ },
+ {
+  "t": 14.658,
+  "name": "door",
+  "vol": 1.0,
+  "shot": 7
+ },
+ {
+  "t": 17.583,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 7
+ },
+ {
+  "t": 17.983,
+  "name": "thud",
+  "vol": 1.0,
+  "shot": 8
+ },
+ {
+  "t": 18.483,
+  "name": "buzzer",
+  "vol": 1.0,
+  "shot": 8
+ },
+ {
+  "t": 21.894,
+  "name": "sparkle",
+  "vol": 1.0,
+  "shot": 9
+ },
+ {
+  "t": 24.319,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 10
+ },
+ {
+  "t": 24.619,
+  "name": "splat",
+  "vol": 1.0,
+  "shot": 10
+ },
+ {
+  "t": 24.719,
+  "name": "boom",
+  "vol": 1.0,
+  "shot": 10
+ },
+ {
+  "t": 28.251,
+  "name": "stomp",
+  "vol": 1.0,
+  "shot": 11
+ },
+ {
+  "t": 28.451,
+  "name": "glitch",
+  "vol": 1.0,
+  "shot": 11
+ },
+ {
+  "t": 30.969,
+  "name": "gasp",
+  "vol": 1.0,
+  "shot": 12
+ },
+ {
+  "t": 33.21,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 13
+ },
+ {
+  "t": 33.26,
+  "name": "boing",
+  "vol": 1.0,
+  "shot": 13
+ },
+ {
+  "t": 35.653,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 14
+ },
+ {
+  "t": 37.828,
+  "name": "click",
+  "vol": 1.0,
+  "shot": 15
+ },
+ {
+  "t": 39.701,
+  "name": "boom",
+  "vol": 1.0,
+  "shot": 16
+ },
+ {
+  "t": 39.801,
+  "name": "boing",
+  "vol": 1.0,
+  "shot": 16
+ },
+ {
+  "t": 42.407,
+  "name": "thud",
+  "vol": 1.0,
+  "shot": 17
+ },
+ {
+  "t": 44.749,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 18
+ },
+ {
+  "t": 46.715,
+  "name": "gasp",
+  "vol": 1.0,
+  "shot": 19
+ },
+ {
+  "t": 49.278,
+  "name": "boom",
+  "vol": 1.0,
+  "shot": 20
+ },
+ {
+  "t": 49.378,
+  "name": "splat",
+  "vol": 1.0,
+  "shot": 20
+ },
+ {
+  "t": 51.336,
+  "name": "hammer",
+  "vol": 1.0,
+  "shot": 21
+ },
+ {
+  "t": 52.612,
+  "name": "screaming",
+  "vol": 1.0,
+  "shot": 22
+ },
+ {
+  "t": 52.912,
+  "name": "glitch",
+  "vol": 1.0,
+  "shot": 22
+ },
+ {
+  "t": 54.995,
+  "name": "alarm",
+  "vol": 1.0,
+  "shot": 23
+ },
+ {
+  "t": 55.395,
+  "name": "teleport",
+  "vol": 1.0,
+  "shot": 23
+ },
+ {
+  "t": 59.094,
+  "name": "thud",
+  "vol": 1.0,
+  "shot": 24
+ },
+ {
+  "t": 59.494,
+  "name": "splat",
+  "vol": 1.0,
+  "shot": 24
+ },
+ {
+  "t": 62.649,
+  "name": "wind",
+  "vol": 1.0,
+  "shot": 25
+ },
+ {
+  "t": 65.154,
+  "name": "ding",
+  "vol": 1.0,
+  "shot": 26
+ },
+ {
+  "t": 65.354,
+  "name": "sparkle",
+  "vol": 1.0,
+  "shot": 26
+ },
+ {
+  "t": 67.96,
+  "name": "coin",
+  "vol": 1.0,
+  "shot": 27
+ },
+ {
+  "t": 69.643,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 28
+ },
+ {
+  "t": 71.86,
+  "name": "crowd",
+  "vol": 1.0,
+  "shot": 29
+ },
+ {
+  "t": 73.288,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 30
+ },
+ {
+  "t": 73.488,
+  "name": "cheer",
+  "vol": 1.0,
+  "shot": 30
+ },
+ {
+  "t": 74.215,
+  "name": "rimshot",
+  "vol": 1.0,
+  "shot": 31
+ },
+ {
+  "t": 76.759,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 32
+ },
+ {
+  "t": 78.244,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 33
+ },
+ {
+  "t": 78.444,
+  "name": "gasp",
+  "vol": 1.0,
+  "shot": 33
+ },
+ {
+  "t": 80.507,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 34
+ },
+ {
+  "t": 80.627,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 34
+ },
+ {
+  "t": 80.747,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 34
+ },
+ {
+  "t": 81.259,
+  "name": "sparkle",
+  "vol": 1.0,
+  "shot": 35
+ },
+ {
+  "t": 83.676,
+  "name": "thud",
+  "vol": 1.0,
+  "shot": 36
+ },
+ {
+  "t": 84.814,
+  "name": "cheer",
+  "vol": 1.0,
+  "shot": 37
+ },
+ {
+  "t": 85.014,
+  "name": "confetti",
+  "vol": 1.0,
+  "shot": 37
+ },
+ {
+  "t": 86.801,
+  "name": "buzzer",
+  "vol": 1.0,
+  "shot": 38
+ },
+ {
+  "t": 89.456,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 39
+ },
+ {
+  "t": 91.715,
+  "name": "ding",
+  "vol": 1.0,
+  "shot": 40
+ },
+ {
+  "t": 97.174,
+  "name": "boing",
+  "vol": 1.0,
+  "shot": 41
+ }
+]

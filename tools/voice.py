@@ -110,14 +110,18 @@ def whisper_words(src, cache, force=False):
         c = json.load(open(cache))
         if c.get('source') == stamp: return c['words']
     tmp = cache + '.tmp'
-    try:
-        import faster_whisper  # noqa: F401
+    groq_key = get_groq_key()
+    if groq_key:
         transcribe(src, tmp)
-    except ImportError:
-        if not WHISPER_PY:
-            sys.exit('faster-whisper is not installed in this python. Run setup.py again, or pip install faster-whisper, '
-                     'or set "whisper_python" in config.json to a python that has it.')
-        subprocess.run([WHISPER_PY, os.path.abspath(__file__), '--transcribe', src, tmp], check=True)
+    else:
+        try:
+            import faster_whisper  # noqa: F401
+            transcribe(src, tmp)
+        except ImportError:
+            if not WHISPER_PY:
+                sys.exit('faster-whisper is not installed in this python. Run setup.py again, or pip install faster-whisper, '
+                         'or set "whisper_python" in config.json to a python that has it.')
+            subprocess.run([WHISPER_PY, os.path.abspath(__file__), '--transcribe', src, tmp], check=True)
     words = json.load(open(tmp)); os.remove(tmp)
     json.dump({'source': stamp, 'words': words}, open(cache, 'w'))
     return words
